@@ -1,13 +1,16 @@
 package za.ac.cput.adp_capstone_project.domain;
 
-import org.w3c.dom.Text;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import java.util.Objects;
-
+@Entity
 public class HairColor {
+    @Id
     private String colorCode;
     private String colorName;
-    private Text description;
+    private String description;
     private String image;
 
     public HairColor() {
@@ -28,7 +31,7 @@ public class HairColor {
         return colorName;
     }
 
-    public Text getDescription() {
+    public String getDescription() {
         return description;
     }
 
@@ -61,7 +64,7 @@ public class HairColor {
     public static class hairColorBuilder{
         private String colorCode;
         private String colorName;
-        private Text description;
+        private String description;
         private String image;
 
         public hairColorBuilder setColorCode(String colorCode) {
@@ -74,7 +77,7 @@ public class HairColor {
             return this;
         }
 
-        public hairColorBuilder setDescription(Text description) {
+        public hairColorBuilder setDescription(String description) {
             this.description = description;
             return this;
         }
