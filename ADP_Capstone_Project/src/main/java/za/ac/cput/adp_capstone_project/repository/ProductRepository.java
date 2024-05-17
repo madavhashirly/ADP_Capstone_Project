@@ -6,4 +6,11 @@ import za.ac.cput.adp_capstone_project.domain.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, String> {
+
+    Product findProductByProductId(String productId);
+
+    void deleteProductByHairTexture(String hairTexture);
+    void deleteProductByHairStyle(String hairStyle);
+
+
 }
