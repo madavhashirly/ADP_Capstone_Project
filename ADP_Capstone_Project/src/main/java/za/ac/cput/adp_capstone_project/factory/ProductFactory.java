@@ -8,19 +8,8 @@ public class ProductFactory {
     public static Product buildProduct(String productID, String hairTexture, String hairStyle, String hairSize,
                                        String hairColor, boolean hairStock, double hairPrice) {
         if (Helper.isNullOrEmpty(productID) || Helper.isNullOrEmpty(hairTexture) || Helper.isNullOrEmpty(hairStyle)
-            || Helper.isNullOrEmpty(hairSize) || Helper.isNullOrEmpty(hairColor))
-            return null;
+            || Helper.isNullOrEmpty(hairSize) || Helper.isNullOrEmpty(hairColor) );
 
-
-
-        return new Product.Builder().setProductId(productID)
-                .setHairTexture(hairTexture)
-                .setHairStyle(hairStyle)
-                .setHairSize(hairSize)
-                .setHairColor(hairColor)
-                .setHairStock(hairStock)
-                .setHairPrice(hairPrice)
-                .build();
-
+        return null;
     }
 }
