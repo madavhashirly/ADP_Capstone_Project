@@ -8,11 +8,11 @@ import java.util.Objects;
 public class Address {
 
     @Id
-    private Long addressId;
-    private int streetNumber;
-    private String streetName;
-    private String city;
-    private int zipCode;
+    protected Long addressId;
+    protected int streetNumber;
+    protected String streetName;
+    protected String city;
+    protected int zipCode;
 
     public Address() {
     }

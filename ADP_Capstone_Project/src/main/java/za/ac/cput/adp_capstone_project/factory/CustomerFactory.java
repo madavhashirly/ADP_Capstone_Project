@@ -7,7 +7,7 @@ import za.ac.cput.adp_capstone_project.util.Helper;
 public class CustomerFactory {
     public static Customer buildCust(Long customerId, String firstName, String lastName, Long phoneNumber, Address address){
         if(Helper.isNumNullOrEmpty(customerId) || Helper.isNullOrEmpty(firstName) || Helper.isNullOrEmpty(lastName)
-                || Helper.isNumNullOrEmpty(phoneNumber) || Helper.isNullOrEmpty(String.valueOf(address)))
+                || Helper.isNumNullOrEmpty(phoneNumber) )
             return null;
         return new Customer.Builder().setCustomer_id(customerId)
                 .setFirstName(firstName)

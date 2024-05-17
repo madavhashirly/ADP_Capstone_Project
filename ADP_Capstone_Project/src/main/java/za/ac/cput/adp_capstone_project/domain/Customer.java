@@ -86,7 +86,7 @@ public class Customer {
         private String firstName;
         private String lastName;
         private Long phoneNumber;
-        Address address;
+        private Address address;
 
         public Builder setCustomer_id(Long customer_id) {
             this.customer_id = customer_id;
