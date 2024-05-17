@@ -4,8 +4,9 @@ import java.util.UUID;
 
 public class Helper {
     public static boolean isNullOrEmpty(String s) {
-        if(s == null || s.isEmpty())
+        if(s == null || s.isEmpty()) {
             return true;
+        }
         return false;
     }
     public static Boolean isNumNullOrEmpty(Long num){

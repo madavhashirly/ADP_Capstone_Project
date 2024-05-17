@@ -8,26 +8,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HairColorFactoryTest {
 private   HairColor C1;
-private HairColor c2;
+private HairColor C2;
     private HairColor C3;
+    private HairColor C4;
 
     @BeforeEach
     void setUp() {
-        C1 = new HairColor.HairColorBuilder()
-                .setColorCode("pnk1")
-                .setColorName("Pink")
-                .setDescription("This color has different shades of pink")
-                .build();
-        c2=new HairColor.HairColorBuilder()
-                .setColorCode("pnk1")
-                .setColorName("Pink")
-                .setDescription("")
-                .build();
-        C3 = new HairColor.HairColorBuilder()
-                .setColorCode("pnk1")
-                .setColorName("Pink")
-                .setDescription("This color has different shades of pink")
-                .build();
+        C1 = HairColorFactory.buildHairColor("pnk1","Pink","This color has different shades of pink");
+        C2 = HairColorFactory.buildHairColor("pnk1",null,"This color has different shades of pink");
+        C3 = HairColorFactory.buildHairColor("pnk1","pink","This color has different shades of pink");
+        C4= C1;
     }
 
     @Test
@@ -41,4 +31,8 @@ private HairColor c2;
         assertNotSame(C1, C3);
     }
 
+    @Test
+    void equalityTest(){
+        assertEquals(C1,C4);
+    }
 }
