@@ -60,7 +60,7 @@ public class HairLength {
                 '}';
     }
 
-    private static class Builder{
+    public static class Builder{
         private String hairlengthID;
         private String hairLengthValue;
         private String lengthDescription;
